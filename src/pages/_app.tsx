@@ -5,6 +5,7 @@ import { api } from "@/utils/api";
 import "@/styles/globals.css";
 import { useRef } from "react";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
+import { titleFont } from "@/utils/fonts";
 
 const MyApp: AppType<{ session: Session | null }> = ({
   Component,
@@ -19,7 +20,7 @@ const MyApp: AppType<{ session: Session | null }> = ({
         }}
         containerRef={containerRef}
       >
-        <main data-scroll-container ref={containerRef}>
+        <main className={titleFont.className} data-scroll-container ref={containerRef}>
           <Component {...pageProps} />
         </main>
       </LocomotiveScrollProvider>

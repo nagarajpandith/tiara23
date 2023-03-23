@@ -1,6 +1,6 @@
-import { Orbitron } from "next/font/google";
+import { Trade_Winds } from "next/font/google";
 
-export const countdownFont = Orbitron({
+export const titleFont = Trade_Winds({
   weight: ["400"],
   subsets: ["latin"],
 });

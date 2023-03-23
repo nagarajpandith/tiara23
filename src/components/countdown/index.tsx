@@ -1,4 +1,4 @@
-import { countdownFont } from "@/utils/fonts";
+import { titleFont } from "@/utils/fonts";
 import Image from "next/image";
 import { useEffect, useState, type FC } from "react";
 
@@ -57,7 +57,7 @@ const Countdown: FC = () => {
           data-scroll-speed="5"
         >
           <a
-            className={`${countdownFont.className} w-[60px] text-4xl font-extrabold lg:text-7xl`}
+            className={`${titleFont.className} w-[60px] text-4xl font-extrabold lg:text-7xl`}
           >
             {countdown.hours}
           </a>
@@ -71,7 +71,7 @@ const Countdown: FC = () => {
           data-scroll-speed="5"
         >
           <a
-            className={`${countdownFont.className} w-[130px] text-4xl font-extrabold lg:text-7xl`}
+            className={`${titleFont.className} w-[130px] text-4xl font-extrabold lg:text-7xl`}
           >
             {countdown.minutes}
           </a>
@@ -85,7 +85,7 @@ const Countdown: FC = () => {
           data-scroll-speed="5"
         >
           <a
-            className={`${countdownFont.className} w-[130px] text-4xl font-extrabold lg:text-7xl`}
+            className={`${titleFont.className} w-[130px] text-4xl font-extrabold lg:text-7xl`}
           >
             {countdown.seconds}
           </a>
