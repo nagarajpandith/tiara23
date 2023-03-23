@@ -92,6 +92,7 @@ const Rules = () => {
 
   return (
     <section
+      id="rules"
       data-scroll-section
       className="h-screen w-screen text-white transition-colors duration-500"
     >
@@ -107,15 +108,35 @@ const Rules = () => {
           <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {perks.map((perk, index) => (
               <a
-                data-scroll
                 key={index}
                 className="block rounded-xl border border-red-500 p-8 shadow-xl transition-all duration-300 hover:scale-[1.05] hover:border-red-500 hover:shadow-red-500/25"
               >
-                <div>{perk.icon}</div>
-                <div className="mt-4 text-lg font-medium leading-6 text-gray-200">
+                <div
+                  data-scroll
+                  data-scroll-direction="vertical"
+                  data-scroll-speed="1"
+                  data-scroll-delay={index * 0.1}
+                >
+                  {perk.icon}
+                </div>
+                <div
+                  data-scroll
+                  data-scroll-direction="vertical"
+                  data-scroll-speed="1"
+                  data-scroll-delay={index++ * 0.1}
+                  className="mt-4 text-lg font-medium leading-6 text-gray-200"
+                >
                   {perk.title}
                 </div>
-                <p className="mt-1 text-sm text-gray-200">{perk.desc}</p>
+                <p
+                  data-scroll
+                  data-scroll-direction="vertical"
+                  data-scroll-speed="1"
+                  data-scroll-delay={index * 0.1}
+                  className="mt-1 text-sm text-gray-200"
+                >
+                  {perk.desc}
+                </p>
               </a>
             ))}
           </div>
