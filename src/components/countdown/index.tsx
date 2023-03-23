@@ -43,12 +43,12 @@ const Countdown: FC = () => {
           data-scroll
           data-scroll-direction="horizontal"
           data-scroll-speed="9"
-          className="mt-5 outline-title text-center text-9xl font-extrabold text-transparent whitespace-nowrap opacity-50"
+          className="outline-title mt-5 whitespace-nowrap text-center text-9xl font-extrabold text-transparent opacity-50"
         >
           Race against the clock!
         </h1>
       </div>
-      
+
       <div
         data-scroll-section
         className="relative mt-[20vh] flex flex-col items-start justify-center gap-5 p-10 text-white drop-shadow-xl sm:items-center lg:flex-row lg:gap-10"
@@ -105,6 +105,20 @@ const Countdown: FC = () => {
           </a>
           <span className="ml-2 text-xl">Seconds</span>
         </div>
+      </div>
+
+      <div
+        data-scroll-section
+        className="flex w-full flex-col items-center justify-center lg:mt-0"
+      >
+        <h1
+          data-scroll
+          data-scroll-direction="vertical"
+          data-scroll-speed="9"
+          className="whitespace-nowrap text-center text-xl font-extrabold text-white"
+        >
+          One hour to escape before the final cataclysmic event.
+        </h1>
       </div>
     </>
   );

@@ -8,7 +8,7 @@ const Navbar: FC = () => {
   const links = [
     {
       label: "Home",
-      url: "/",
+      url: "#home",
     },
     {
       label: "Rules",
@@ -38,13 +38,15 @@ const Navbar: FC = () => {
               height={60}
               priority
             />
-            <span className={`font-bold text-white`}>The Last Stand</span>
+            <span className={`slideUp font-bold text-white`}>
+              The Last Stand
+            </span>
           </Link>
 
           <div className="hidden space-x-6 text-white lg:flex">
             {links.map((link) => (
               <Link
-                className="transition-colors duration-300 hover:text-red-500"
+                className="slideUp transition-colors duration-300 hover:text-red-500"
                 key={link.url}
                 href={link.url}
               >

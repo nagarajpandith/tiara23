@@ -3,6 +3,7 @@ import Head from "next/head";
 import Navbar from "@/components/navbar";
 import RoomsSvgComponent from "@/components/svgs/room";
 import Countdown from "@/components/countdown";
+import Rules from "@/components/rule";
 
 const Home: NextPage = () => {
   return (
@@ -19,6 +20,7 @@ const Home: NextPage = () => {
         <Navbar />
         <div
           data-scroll-section
+          data-scroll-target="#home"
           className="-z-5 relative h-screen overflow-hidden"
         >
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform whitespace-nowrap text-center">
@@ -43,6 +45,13 @@ const Home: NextPage = () => {
         </div>
 
         <Countdown />
+
+        <div
+          data-scroll-section
+          className="-z-5 relative h-screen overflow-hidden"
+        >
+          <Rules />
+        </div>
       </main>
     </>
   );
