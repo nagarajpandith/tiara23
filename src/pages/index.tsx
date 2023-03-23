@@ -18,12 +18,13 @@ const Home: NextPage = () => {
       </Head>
       <main className="flex h-[300vh] flex-col bg-gradient-to-b from-[#191238] to-[#4d3e6a]">
         <Navbar />
-       <div className="relative h-screen -z-5 overflow-hidden">
+        <div
+          data-scroll-section
+          className="-z-5 relative h-screen overflow-hidden"
+        >
+          <RoomsSvgComponent className=" -ml-[142%] h-screen w-auto sm:-ml-[60%] md:-ml-[40%]  lg:-ml-[20%] xl:-ml-[7%]   " />
+        </div>
 
-       <RoomsSvgComponent className=" -ml-[142%] sm:-ml-[60%] md:-ml-[40%] lg:-ml-[20%] xl:-ml-[7%]  w-auto h-screen   " />
-       </div>
-  
-        
         <Countdown />
       </main>
     </>

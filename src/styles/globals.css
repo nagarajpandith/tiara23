@@ -84,3 +84,10 @@ html.has-scroll-dragging {
   right: auto;
   bottom: 0;
 }
+
+.outline-title {
+  -webkit-text-stroke: 1px white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
