@@ -28,17 +28,17 @@ const Navbar: FC = () => {
   return (
     <nav className="fixed top-0 z-10 w-full border-b border-gray-200 bg-white bg-opacity-10 backdrop-blur-lg backdrop-filter">
       <div className="mx-auto max-w-5xl px-4">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
             <Image
-              className="rounded-full bg-white bg-opacity-30 p-1 backdrop-blur-lg backdrop-filter"
+              className="rounded-full"
               src="/logo.png"
               alt="Logo"
-              width={40}
-              height={40}
+              width={60}
+              height={60}
               priority
             />
-            <span className={`font-bold text-white`}>Incridea&apos;23</span>
+            <span className={`font-bold text-white`}>The Last Stand</span>
           </Link>
 
           <div className="hidden space-x-6 text-white lg:flex">

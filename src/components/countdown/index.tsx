@@ -48,9 +48,10 @@ const Countdown: FC = () => {
           Race against the clock!
         </h1>
       </div>
+      
       <div
         data-scroll-section
-        className="relative mt-[20vh] flex flex-col items-start justify-center gap-5 p-10 text-red-500 drop-shadow-xl sm:items-center lg:flex-row lg:gap-10"
+        className="relative mt-[20vh] flex flex-col items-start justify-center gap-5 p-10 text-white drop-shadow-xl sm:items-center lg:flex-row lg:gap-10"
       >
         <Image
           src={"/chakra.png"}
@@ -84,7 +85,7 @@ const Countdown: FC = () => {
           data-scroll-speed="5"
         >
           <a
-            className={`${titleFont.className} w-[130px] text-4xl font-extrabold lg:text-7xl`}
+            className={`${titleFont.className} w-[100px] text-4xl font-extrabold lg:text-7xl`}
           >
             {countdown.minutes}
           </a>
@@ -98,7 +99,7 @@ const Countdown: FC = () => {
           data-scroll-speed="5"
         >
           <a
-            className={`${titleFont.className} w-[130px] text-4xl font-extrabold lg:text-7xl`}
+            className={`${titleFont.className} w-[100px] text-4xl font-extrabold lg:text-7xl`}
           >
             {countdown.seconds}
           </a>
