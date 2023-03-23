@@ -2,7 +2,7 @@ import { type FC } from "react";
 
 const Navbar: FC = () => {
   return (
-    <nav className="flex h-16 w-full items-center justify-between bg-white bg-opacity-20 px-4 backdrop-blur-xl backdrop-filter">
+    <nav data-scroll-section className="flex h-16 w-full items-center justify-between bg-white bg-opacity-20 px-4 backdrop-blur-xl backdrop-filter">
       <div></div>
       <ul className="flex w-1/3 items-center justify-between text-xl font-bold text-white">
         <li className="cursor-pointer hover:text-gray-300">Home</li>
