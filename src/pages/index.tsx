@@ -1,6 +1,7 @@
 import { type NextPage } from "next";
 import Head from "next/head";
 import Navbar from "@/components/navbar";
+import Countdown from "@/components/countdown";
 
 const Home: NextPage = () => {
   return (
@@ -13,8 +14,9 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex min-h-screen flex-col bg-gradient-to-b from-[#191238] to-[#4d3e6a]">
+      <main className="flex h-[300vh] flex-col bg-gradient-to-b from-[#191238] to-[#4d3e6a]">
         <Navbar />
+        <Countdown />
       </main>
     </>
   );
