@@ -1,66 +1,100 @@
-import { RiTranslate } from "react-icons/ri";
-import { MdHighQuality } from "react-icons/md";
-import { BsGlobe2 } from "react-icons/bs";
-import { HiOutlineDocumentText, HiUserGroup } from "react-icons/hi";
-import { BsFillBookmarkHeartFill } from "react-icons/bs";
+import { MdOutlineGroups3 } from "react-icons/md";
+import { FaChild } from "react-icons/fa";
+import { BsAlarm } from "react-icons/bs";
+import { AiOutlineSafety } from "react-icons/ai";
+import { BsSearch } from "react-icons/bs";
+import { RiAdminLine } from "react-icons/ri";
+import { MdOutlineNoFood } from "react-icons/md";
+import { AiOutlineFieldTime } from "react-icons/ai";
+import { GiMoneyStack } from "react-icons/gi";
 
 const Rules = () => {
   const perks = [
     {
       icon: (
-        <BsGlobe2 className="h-10 w-10" style={{ fill: "url(#gradient)" }} />
-      ),
-      title: "Multilingual Meeting Support",
-      desc: "Our app allows users who speak different languages to communicate with each other. The app translates the text and speaks it out to other participants in the language they have selected.",
-    },
-    {
-      icon: (
-        <RiTranslate className="h-10 w-10" style={{ fill: "url(#gradient)" }} />
-      ),
-      title: "Real-time Translation",
-      desc: "Our app provides real-time translation, so you can focus on the conversation without worrying about the language barrier. The translation is done quickly and accurately, ensuring smooth communication.",
-    },
-    {
-      icon: (
-        <HiOutlineDocumentText
-          className="h-10 w-10"
-          style={{ stroke: "url(#gradient)" }}
-        />
-      ),
-      title: "Meeting Minutes",
-      desc: "Our app automatically generates a summary of the entire meeting or conference. This feature saves time and helps ensure that all participants are on the same page.",
-    },
-    {
-      icon: (
-        <HiUserGroup className="h-10 w-10" style={{ fill: "url(#gradient)" }} />
-      ),
-      title: "Large Capacity",
-      desc: "Our app can support up to 100 concurrent users. This means that even large meetings and conferences can be easily accommodated, making it ideal for businesses, schools, and other organizations.",
-    },
-    {
-      icon: (
-        <MdHighQuality
+        <MdOutlineGroups3
           className="h-10 w-10"
           style={{ fill: "url(#gradient)" }}
         />
       ),
-      title: "HQ video and Screen Sharing",
-      desc: "Our app provides high-quality video and screen sharing, ensuring that everyone can see and hear each other clearly. This feature helps to ensure that the meeting is productive and engaging.",
+      title: "Group size",
+      desc: "Grab 1 to 5 of your bravest buds for this adventure!",
     },
     {
       icon: (
-        <BsFillBookmarkHeartFill
+        <FaChild className="h-10 w-10" style={{ fill: "url(#gradient)" }} />
+      ),
+      title: "Age restriction",
+      desc: "Sorry kiddos, you must be at least 16 years old to join in on the fun.",
+    },
+    {
+      icon: (
+        <BsAlarm className="h-10 w-10" style={{ fill: "url(#gradient)" }} />
+      ),
+      title: "Time limit",
+      desc: "Can you beat the clock? You only have 60 minutes to escape!",
+    },
+    {
+      icon: (
+        <AiOutlineSafety
           className="h-10 w-10"
           style={{ fill: "url(#gradient)" }}
         />
       ),
-      title: "User friendly Interface",
-      desc: "Our app has a user-friendly interface that is easy to navigate. This ensures that everyone can participate in the meeting or conference without any technical difficulties, making it ideal for users of all skill levels.",
+      title: "Safety rules",
+      desc: "Let's keep it safe and sane - no running, jumping, or breaking stuff, and no bringing in any outside tools or toys.",
+    },
+    {
+      icon: (
+        <BsSearch className="h-10 w-10" style={{ fill: "url(#gradient)" }} />
+      ),
+      title: "Clue system",
+      desc: "If you get stuck, don't worry! We've got your back with our handy walkie-talkie clue system.",
+    },
+    {
+      icon: (
+        <RiAdminLine className="h-10 w-10" style={{ fill: "url(#gradient)" }} />
+      ),
+      title: "Game master",
+      desc: "We've got our eyes on you! Our game master is keeping a watchful eye and can help you out if you need it.",
+    },
+    {
+      icon: (
+        <MdOutlineNoFood
+          className="h-10 w-10"
+          style={{ fill: "url(#gradient)" }}
+        />
+      ),
+      title: "Food and drinks",
+      desc: "Let's keep the room clean - no food or drinks allowed inside.",
+    },
+    {
+      icon: (
+        <AiOutlineFieldTime
+          className="h-10 w-10"
+          style={{ fill: "url(#gradient)" }}
+        />
+      ),
+      title: "Late arrival policy",
+      desc: "Don't be tardy to the party! If you're late, your game time may be shortened and you might have to wait for the next game.",
+    },
+    {
+      icon: (
+        <GiMoneyStack
+          className="h-10 w-10"
+          style={{ fill: "url(#gradient)" }}
+        />
+      ),
+      title: "Refund policy",
+      desc: "Once the game starts, there's no turning back! No refunds, sorry!",
     },
   ];
 
   return (
-    <section className="h-screen w-screen text-white transition-colors duration-500">
+    <section
+      data-scroll-section
+      className="h-screen w-screen text-white transition-colors duration-500"
+    >
       <svg width="0" height="0">
         <linearGradient id="gradient" x1="100%" y1="100%" x2="0%" y2="0%">
           <stop stopColor="#fa1c16" offset="0%" />
@@ -73,11 +107,14 @@ const Rules = () => {
           <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {perks.map((perk, index) => (
               <a
+                data-scroll
                 key={index}
-                className="border-red-500 hover:border-red-500 hover:shadow-red-500/25 block rounded-xl border p-8 shadow-xl transition-all duration-300 hover:scale-[1.05]"
+                className="block rounded-xl border border-red-500 p-8 shadow-xl transition-all duration-300 hover:scale-[1.05] hover:border-red-500 hover:shadow-red-500/25"
               >
                 <div>{perk.icon}</div>
-                <div>{perk.title}</div>
+                <div className="mt-4 text-lg font-medium leading-6 text-gray-200">
+                  {perk.title}
+                </div>
                 <p className="mt-1 text-sm text-gray-200">{perk.desc}</p>
               </a>
             ))}

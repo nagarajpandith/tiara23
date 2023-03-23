@@ -46,12 +46,7 @@ const Home: NextPage = () => {
 
         <Countdown />
 
-        <div
-          data-scroll-section
-          className="-z-5 relative h-screen overflow-hidden"
-        >
-          <Rules />
-        </div>
+        <Rules />
       </main>
     </>
   );
