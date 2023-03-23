@@ -44,11 +44,18 @@ const Countdown: FC = () => {
           width={500}
           height={500}
           alt="Ship Helm"
-          className="absolute opacity-[15%]"
-          style={{ transform: `rotate(${rotation})` }}
+          className="absolute opacity-10"
+          style={{
+            transform: `rotate(${rotation})`,
+          }}
         />
 
-        <div className="flex items-end">
+        <div
+          className="flex items-end"
+          data-scroll
+          data-scroll-direction="vertical"
+          data-scroll-speed="5"
+        >
           <a
             className={`${countdownFont.className} w-[60px] text-4xl font-extrabold lg:text-7xl`}
           >
@@ -57,7 +64,12 @@ const Countdown: FC = () => {
           <span className="ml-2 text-xl">Hours</span>
         </div>
 
-        <div className="flex items-end">
+        <div
+          className="flex items-end"
+          data-scroll
+          data-scroll-direction="vertical"
+          data-scroll-speed="5"
+        >
           <a
             className={`${countdownFont.className} w-[130px] text-4xl font-extrabold lg:text-7xl`}
           >
@@ -66,7 +78,12 @@ const Countdown: FC = () => {
           <span className="ml-2 text-xl">Minutes</span>
         </div>
 
-        <div className="flex items-end">
+        <div
+          className="flex items-end"
+          data-scroll
+          data-scroll-direction="vertical"
+          data-scroll-speed="5"
+        >
           <a
             className={`${countdownFont.className} w-[130px] text-4xl font-extrabold lg:text-7xl`}
           >
@@ -75,8 +92,16 @@ const Countdown: FC = () => {
           <span className="ml-2 text-xl">Seconds</span>
         </div>
       </div>
-      <div className="mt-10 flex w-full flex-col items-center justify-center lg:mt-0">
-        <h1 className="mt-5 text-center text-2xl font-extrabold text-white">
+      <div
+        data-scroll-section
+        className="mt-10 flex w-full flex-col items-center justify-center lg:mt-0"
+      >
+        <h1
+          data-scroll
+          data-scroll-direction="vertical"
+          data-scroll-speed="12"
+          className="text-center text-xl font-extrabold text-white md:text-2xl"
+        >
           Race against the clock!
         </h1>
       </div>
