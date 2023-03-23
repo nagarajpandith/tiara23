@@ -4,6 +4,7 @@ import Navbar from "@/components/navbar";
 import RoomsSvgComponent from "@/components/svgs/room";
 import Countdown from "@/components/countdown";
 import Rules from "@/components/rule";
+import Image from "next/image";
 
 const Home: NextPage = () => {
   return (
@@ -41,12 +42,23 @@ const Home: NextPage = () => {
               Apocalyptic Escape Room
             </p>
           </div>
+
           <RoomsSvgComponent className=" -ml-[142%] h-screen w-auto sm:-ml-[60%] md:-ml-[40%]  lg:-ml-[20%] xl:-ml-[7%]   " />
         </div>
 
         <Countdown />
 
         <Rules />
+        <div data-scroll-section className="mt-32 flex items-center justify-center">
+          <div className="text-center text-white">
+            <button className="bg-red-500 px-5 text-4xl font-bold hover:bg-red-600">
+              Register Now
+            </button>
+            <p className="text-xl font-semibold text-red-500">
+              world is ending
+            </p>
+          </div>
+        </div>
       </main>
     </>
   );
