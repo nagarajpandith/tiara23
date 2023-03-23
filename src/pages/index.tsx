@@ -22,8 +22,22 @@ const Home: NextPage = () => {
           className="-z-5 relative h-screen overflow-hidden"
         >
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform whitespace-nowrap text-center">
-            <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold text-white heading">The Last Stand</h1>
-            <p className="text-sm md:text-xl lg:text-2xl text-white tagline">Apocalyptic Escape Room</p>
+            <h1
+              data-scroll
+              data-scroll-direction="vertical"
+              data-scroll-speed="5"
+              className="heading text-4xl font-bold text-white md:text-6xl lg:text-8xl"
+            >
+              The Last Stand
+            </h1>
+            <p
+              data-scroll
+              data-scroll-direction="vertical"
+              data-scroll-speed="2"
+              className="tagline text-sm text-white md:text-xl lg:text-2xl"
+            >
+              Apocalyptic Escape Room
+            </p>
           </div>
           <RoomsSvgComponent className=" -ml-[142%] h-screen w-auto sm:-ml-[60%] md:-ml-[40%]  lg:-ml-[20%] xl:-ml-[7%]   " />
         </div>
